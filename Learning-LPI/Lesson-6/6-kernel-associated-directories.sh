@@ -56,8 +56,14 @@ cat /sys/class/net/enp0s3/address
 # Memoria y tipos de memoria
 # Utiliza el comando `free` para ver el uso de memoria del sistema
 echo "=== Información de Memoria ==="
-free -h
+free -h  # Formato legible para humanos
+free -b  # Muestra el uso de memoria en bytes
+free -g  # Muestra el uso de memoria en gigabytes
+free -k  # Muestra el uso de memoria en kilobytes (predeterminado)
+free -m  # Muestra el uso de memoria en megabytes
+# `free` muestra la memoria total, usada, compartida, buffers, caché y disponible.
 # Muestra la memoria total, usada, compartida, buffers, caché y disponible en formato legible (human-readable)
+free
 
 # Ejercicio práctico:
 # 1. Verifica los módulos cargados con `cat /proc/modules`.
