@@ -21,6 +21,37 @@ echo "T -> Ordena por tiempo de CPU consumido."
 echo "P -> Ordena por uso de CPU (predeterminado)."
 echo "R -> Reordena los procesos."
 
+# Uso avanzado del comando 'top' con parámetros personalizados
+
+# El comando 'top' en Linux permite monitorear los procesos del sistema en tiempo real.
+# Algunos parámetros útiles para personalizar la visualización son:
+
+# -d <segundos>: Establece el intervalo de actualización en segundos.
+# Ejemplo: Actualizar cada 2 segundos
+top -d 2
+# El comando anterior hace que 'top' actualice la información de los procesos cada 2 segundos.
+
+# -n <número>: Especifica cuántas veces se debe actualizar la pantalla antes de salir.
+# Ejemplo: Actualizar 5 veces y salir
+top -n 5
+# El comando anterior mostrará la información de los procesos 5 veces y luego saldrá automáticamente.
+
+# -u <usuario>: Muestra solo los procesos del usuario especificado.
+# Ejemplo: Mostrar procesos del usuario 'root'
+top -u root
+# El comando anterior filtra los procesos para mostrar solo los pertenecientes al usuario 'root'.
+
+# -p <PID>: Filtra para mostrar solo el proceso con el identificador de proceso especificado.
+# Ejemplo: Mostrar información del proceso con PID 1234
+top -p 1234
+# Este comando muestra únicamente el proceso que tiene el PID 1234.
+
+# -b: Ejecuta 'top' en modo por lotes (batch mode), útil para capturar la salida en un archivo de texto.
+# Ejemplo: Capturar la salida de 'top' en un archivo de texto llamado 'output.txt'
+top -b -n 1 > output.txt
+# El comando anterior ejecuta 'top' en modo por lotes, actualiza la salida una vez (-n 1)
+# y guarda la información en el archivo 'output.txt'.
+
 # Un snapshot de los procesos: ps
 echo "=== Snapshot de Procesos con 'ps' ==="
 ps -f
@@ -46,6 +77,32 @@ ls /proc/1/
 
 cat /proc/1/cmdline
 # Muestra la línea de comando con la que se ejecutó el proceso con PID 1
+
+echo "=== Exploración del Directorio /proc ==="
+# El directorio /proc es un sistema de archivos virtual que proporciona información sobre los procesos en ejecución.
+
+echo "=== Explorando /proc/1/ ==="
+# El directorio /proc/1/ corresponde al proceso con PID 1, usualmente el proceso init o systemd.
+
+echo "=== Explorando /proc/1/cwd ==="
+# /proc/1/cwd es un enlace simbólico al directorio de trabajo actual del proceso con PID 1.
+ls -l /proc/1/cwd
+# La opción '-l' muestra información detallada del enlace.
+
+echo "=== Explorando /proc/1/root ==="
+# /proc/1/root es un enlace simbólico al directorio raíz del proceso.
+ls -l /proc/1/root
+# Se necesita acceso de superusuario para explorar esta ruta.
+
+echo "=== Explorando /proc/1/exe ==="
+# /proc/1/exe es un enlace simbólico al ejecutable que se está ejecutando para el proceso con PID 1.
+ls -l /proc/1/exe
+# El uso de 'sudo' puede ser necesario para acceder a este enlace.
+
+echo "=== Exploración con Permisos de Superusuario ==="
+# Para acceder a ciertas rutas en /proc, se necesitan permisos de superusuario:
+sudo ls -l /proc/1/root
+# El uso de 'sudo' permite ver el contenido de enlaces protegidos.
 
 # Carga del sistema: uptime
 echo "=== Carga del Sistema con 'uptime' ==="
