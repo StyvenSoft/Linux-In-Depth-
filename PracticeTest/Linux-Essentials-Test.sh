@@ -14,8 +14,7 @@ echo "Bienvenido al test de Linux Essentials. Selecciona la respuesta correcta p
 for i in "${!questions[@]}"; do
     echo -e "\nPregunta $((i + 1)): ${questions[i]}"
     echo -e "${options[i]}"
-    echo -n "Tu respuesta : "
-    read -r answer
+    read -p "Tu respuesta: " answer
 
     # Validar la respuesta
     if [[ "$answer" == "${correct_answers[i]}" ]]; then
@@ -28,6 +27,11 @@ for i in "${!questions[@]}"; do
 done
 
 # Mostrar resultados finales
-echo -e "\nTest completado."
+echo -e "\n*** Test completado ***\n"
 echo "Respuestas correctas: $correct_count"
 echo "Respuestas incorrectas: $incorrect_count"
+
+# Calcular y mostrar el porcentaje de respuestas correctas
+total_questions=${#questions[@]}
+percentage=$(( (correct_count * 100) / total_questions ))
+echo "Has obtenido un $percentage% de respuestas correctas."
