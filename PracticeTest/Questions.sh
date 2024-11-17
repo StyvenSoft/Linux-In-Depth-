@@ -16,6 +16,11 @@ questions=(
     "¿Cuál es la principal diferencia entre una distribución rolling release y una distribución LTS?"
     "¿Qué organización es responsable del proyecto GNU?"
     "¿Cuál de las siguientes NO es una característica de una licencia de software libre según la Open Source Initiative?"
+    "La licencia GNU GPL requiere que:"
+    "¿Cuál de los siguientes no es un ejemplo de licencia de software libre?"
+    "¿Qué comando se usa para buscar software en el repositorio del sistema?"
+    "El término 'fork' en proyectos de código abierto se refiere a:"
+    "¿Cuál es la principal ventaja del software de código abierto?"
     
     # Tema 2: Encontrando el camino en un sistema Linux
     "¿Cuál es el directorio raíz de un sistema de archivos Linux?"
@@ -33,6 +38,11 @@ questions=(
     "¿Qué tipo de archivo es un archivo especial de carácter en Linux?"
     "¿Qué comando se utiliza para encontrar archivos según su nombre o patrones?"
     "¿Cuál es el comando correcto para listar todos los archivos, incluidos los ocultos, en formato largo?"
+    "¿Qué comando se usa para mostrar información del sistema de archivos?"
+    "¿Cuál es la diferencia entre 'cat' y 'less'?"
+    "¿Qué archivo contiene información sobre los usuarios del sistema?"
+    "El comando 'ln' se utiliza para:"
+    "¿Qué representa la ruta '/etc/' en un sistema Linux?"
     
     # Tema 3: El poder de la línea de comandos
     "¿Qué comando permite mostrar el contenido de un archivo en la terminal?"
@@ -50,6 +60,11 @@ questions=(
     "¿Cómo puedes detener un proceso en segundo plano con su número de trabajo?"
     "¿Qué operador redirige tanto la salida estándar como la salida de error estándar a un archivo?"
     "¿Qué comando se utiliza para mostrar los primeros 10 procesos con mayor uso de CPU?"
+    "¿Qué operador redirige tanto la salida estándar como los errores?"
+    "¿Cuál es el propósito del comando 'grep'?"
+    "El comando 'sed' se usa principalmente para:"
+    "¿Cómo se puede detener un proceso en ejecución en segundo plano?"
+    "¿Qué significa el carácter '|' en la línea de comandos?"
     
     # Tema 4: El sistema operativo Linux
     "¿Qué distribución de Linux es conocida por su estabilidad y uso en servidores?"
@@ -67,6 +82,11 @@ questions=(
     "¿Qué comando se utiliza para reiniciar un sistema Linux inmediatamente?"
     "¿Qué diferencia principal tiene ext4 frente a ext3 en sistemas de archivos?"
     "¿Dónde se almacena el archivo de configuración del cargador de arranque GRUB en la mayoría de los sistemas?"
+    "¿Qué comando muestra información sobre la versión del kernel?"
+    "El proceso de arranque en Linux incluye:"
+    "¿Cuál es el propósito del directorio '/boot'?"
+    "¿Cómo se monta un sistema de archivos manualmente?"
+    "El comando 'uname -r' devuelve información sobre:"
     
     # Tema 5: Seguridad y sistema de permisos de archivos
     "¿Qué permiso permite a un usuario leer el contenido de un archivo en Linux?"
@@ -84,6 +104,11 @@ questions=(
     "¿Qué comando cambiaría los permisos de un archivo de forma recursiva para todos los archivos en un directorio?"
     "¿Qué significa el permiso especial 'sticky bit' en un directorio?"
     "¿Cómo se protege un archivo contra escritura incluso por el propietario?"
+    "¿Qué significa el permiso 'x' para un archivo?"
+    "¿Cómo se cambia el propietario de un archivo?"
+    "¿Qué indica el archivo '/etc/shadow'?"
+    "El comando 'chmod 754 archivo' otorga:"
+    "¿Cuál es la forma más segura de otorgar acceso temporal a un usuario?"
 )
 
 # Array de opciones de respuesta
@@ -104,6 +129,11 @@ options=(
     "a) Rolling release recibe actualizaciones continuas; LTS no\nb) Rolling release tiene más estabilidad; LTS es más experimental\nc) LTS tiene soporte extendido; rolling release tiene versiones fijas\nd) LTS no recibe soporte de actualizaciones"
     "a) Apache Foundation\nb) Linux Foundation\nc) FSF\nd) OSI"
     "a) Acceso al código fuente\nb) Permitir modificaciones\nc) Garantizar actualizaciones\nd) Permitir redistribución"
+    "a) Todo el código fuente esté disponible\nb) El software sea gratuito para siempre\nc) El software no pueda ser modificado\nd) El desarrollador retenga los derechos exclusivos"
+    "a) MIT License\nb) GNU GPL\nc) BSD License\nd) Proprietary License"
+    "a) apt-cache search\nb) grep software\nc) dpkg-query\nd) find software"
+    "a) Duplicar un proyecto existente\nb) Modificar una línea de código\nc) Actualizar un repositorio\nd) Unir ramas de desarrollo"
+    "a) Reducción de costos\nb) Mayor seguridad por revisiones públicas\nc) Control exclusivo del desarrollador\nd) Licencias restringidas"
     
     # Tema 2: Encontrando el camino en un sistema Linux
     "a) /root\nb) /home\nc) /\nd) /etc"
@@ -121,6 +151,11 @@ options=(
     "a) Archivo que almacena datos\nb) Archivo que representa dispositivos hardware\nc) Archivo de texto\nd) Archivo binario"
     "a) grep\nb) locate\nc) find\nd) whereis"
     "a) ls -a\nb) ls -l\nc) ls -la\nd) ls -lh"
+    "a) df\nb) lsblk\nc) du\nd) blkid"
+    "a) 'cat' permite paginación, 'less' no\nb) 'cat' muestra contenido completo, 'less' permite navegar\nc) 'less' es para archivos binarios, 'cat' no\nd) Ambos son sinónimos"
+    "a) /etc/passwd\nb) /etc/shadow\nc) /usr/local\nd) /var/log"
+    "a) Crear enlaces simbólicos o duros\nb) Eliminar enlaces entre archivos\nc) Mover archivos entre sistemas\nd) Renombrar archivos y carpetas"
+    "a) Configuración de usuario\nb) Archivos del sistema\nc) Configuración del sistema\nd) Programas instalados"
     
     # Tema 3: El poder de la línea de comandos
     "a) ls\nb) pwd\nc) cat\nd) cd"
@@ -138,6 +173,11 @@ options=(
     "a) jobs\nb) kill %n\nc) fg\nd) bg"
     "a) >\nb) 2>\nc) 2>&1\nd) |"
     "a) top -o cpu\nb) htop\nc) ps aux --sort=-%cpu\nd) jobs"
+    "a) &>\nb) 2>\nc) 1>\nd) >>"
+    "a) Buscar patrones en archivos\nb) Editar texto de forma interactiva\nc) Ordenar líneas en un archivo\nd) Contar caracteres en un archivo"
+    "a) Buscar y reemplazar texto\nb) Buscar patrones en archivos\nc) Ordenar líneas\nd) Copiar archivos grandes"
+    "a) kill -STOP <pid>\nb) stop <pid>\nc) pause <pid>\nd) terminate <pid>"
+    "a) Redirigir la salida a un archivo\nb) Combinar comandos\nc) Mostrar información de procesos\nd) Eliminar archivos"
     
     # Tema 4: El sistema operativo Linux
     "a) Ubuntu\nb) Arch Linux\nc) Debian\nd) Fedora"
@@ -155,6 +195,11 @@ options=(
     "a) systemctl stop\nb) reboot\nc) shutdown -r now\nd) init 6"
     "a) Compatibilidad con sistemas Windows\nb) Journaling más eficiente\nc) Mejora de la seguridad\nd) Tamaños de partición mayores"
     "a) /boot/grub/menu.lst\nb) /etc/grub.conf\nc) /boot/grub/grub.cfg\nd) /etc/default/grub"
+    "a) uname -a\nb) lsmod\nc) dmesg\nd) modinfo"
+    "a) BIOS, bootloader, kernel, init\nb) BIOS, init, kernel, shell\nc) bootloader, BIOS, init, kernel\nd) kernel, init, bootloader, shell"
+    "a) Archivos de configuración\nb) Archivos del kernel y del bootloader\nc) Datos temporales\nd) Archivos de usuarios"
+    "a) mount\nb) df -h\nc) umount\nd) blkid"
+    "a) La versión del kernel\nb) Los módulos instalados\nc) El tiempo de arranque\nd) Los procesos activos"
     
     # Tema 5: Seguridad y sistema de permisos de archivos
     "a) rwx\nb) r\nc) w\nd) x"
@@ -172,22 +217,27 @@ options=(
     "a) chmod 777 archivo\nb) chmod -R 777 directorio\nc) chown archivo directorio\nd) chmod +x archivo"
     "a) Permite solo al dueño acceder\nb) Solo el dueño puede eliminar archivos\nc) Es un permiso solo para archivos binarios\nd) Se usa para procesos de sistema"
     "a) chmod 000 archivo\nb) chmod +t archivo\nc) chattr +i archivo\nd) chattr +w archivo"
+    "a) Ejecución\nb) Escritura\nc) Lectura\nd) Modificación"
+    "a) chown\nb) chmod\nc) chgrp\nd) usermod"
+    "a) Contraseñas cifradas\nb) Información de grupos\nc) Usuarios conectados\nd) Historial de comandos"
+    "a) Lectura y ejecución al grupo, todos los permisos al propietario, y lectura para otros\nb) Todos los permisos para todos\nc) Solo lectura para todos\nd) Escritura para el propietario y ejecución para el grupo"
+    "a) Usar grupos de usuarios\nb) Cambiar permisos de forma manual\nc) Usar ACLs (listas de control de acceso)\nd) Otorgar permisos root"
 )
 
 # Array de respuestas correctas
 correct_answers=(
     # Tema 1
-    "c" "b" "c" "b" "a" "b" "c" "a" "b" "a" "c" "b" "a" "c" "c"
+    "c" "b" "c" "b" "a" "b" "c" "a" "b" "a" "c" "b" "a" "c" "c" "a" "d" "a" "a" "b"
     
     # Tema 2
-    "c" "c" "d" "c" "c" "b" "a" "b" "c" "a" "b" "a" "b" "c" "c"
+    "c" "c" "d" "c" "c" "b" "a" "b" "c" "a" "b" "a" "b" "c" "c" "a" "b" "a" "a" "c"
     
     # Tema 3
-    "c" "b" "b" "a" "a" "b" "a" "c" "a" "d" "c" "c" "b" "c" "c"
+    "c" "b" "b" "a" "a" "b" "a" "c" "a" "d" "c" "c" "b" "c" "c" "a" "a" "a" "a" "b"
     
     # Tema 4
-    "c" "a" "a" "b" "b" "b" "c" "c" "b" "a" "a" "b" "c" "b" "c"
+    "c" "a" "a" "b" "b" "b" "c" "c" "b" "a" "a" "b" "c" "b" "c" "a" "a" "b" "a" "a"
     
     # Tema 5
-    "b" "a" "b" "c" "c" "b" "d" "c" "b" "c" "b" "c" "b" "b" "c"
+    "b" "a" "b" "c" "c" "b" "d" "c" "b" "c" "b" "c" "b" "b" "c" "a" "a" "a" "a" "c"
 )
