@@ -21,15 +21,21 @@ Bash is pre-installed on most Linux distributions.
 The macOS terminal includes Bash support by default. Simply download the files and run them with:
 
 ```bash
-sh test_linux.sh
+sh Linux-Essentials-Test.sh
 ```
 
 ### Windows
 On Windows, you can use tools like Git Bash or WSL (Windows Subsystem for Linux) to run Bash scripts. Once configured:
 
 ```bash
-sh test_linux.sh
+sh Linux-Essentials-Test.sh
 ```
+
+### Required Files
+
+1. `Linux-Essentials-Test.sh` This is the main script that runs the exam.
+2. `Questions.sh` This file contains the question and answer bank.
+
 ## Features
 
 - Questions are organized into 5 main topics based on the official exam:
