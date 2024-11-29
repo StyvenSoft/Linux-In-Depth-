@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Importar el archivo de preguntas y respuestas
-source ./Questions.sh
-# source ./PracticalExam.sh
+# source ./Questions.sh
+source ./PracticalExam.sh
 
 # Variables de contadores
 correct_count=0

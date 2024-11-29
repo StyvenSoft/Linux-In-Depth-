@@ -89,8 +89,8 @@ correct_answers=(
     "c" "a" "c" "a" "a"
     "a" "b" "b" "b" "c"
     "b" "a" "b" "b" "c"
-    "b" "b" "b" "a" "a"
-    "c" "b" "a" "a" "a"
-    "b" "c" "a" "a" "c"
-    "c" "b" "c" "c" "a"
+    "b" "b" "b" "b" "a"
+    "a" "b" "a" "b" "a"
+    "b" "a" "a" "a" "a"
+    "c" "a" "c" "c" "a"
 )
