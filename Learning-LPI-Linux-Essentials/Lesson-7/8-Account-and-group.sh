@@ -85,6 +85,16 @@ passwd -u steveen
 # -S: Muestra el estado de la contraseña del usuario
 passwd -S steveen
 
+# Comando getent
+
+# Sirve para recuperar entradas de bases de datos configuradas en el sistema, como usuarios, grupos, hosts, servicios, y más
+# Con getent, se puede consultar el archivo /etc/passwd o bases de datos configuradas.
+
+getent passwd usuario
+
+# Salida
+username:x:1001:1001:User Name:/home/username:/bin/bash
+
 # Ejercicios prácticos
 # ====================
 # 1. Crear un usuario "maria" con el directorio de inicio en `/home/maria_custom`, perteneciente al grupo "marketing" y con la shell `/bin/zsh`.

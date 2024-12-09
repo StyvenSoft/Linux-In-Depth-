@@ -40,6 +40,25 @@ ip addr show ens33
 ping -c 3 192.168.0.1
 # El comando 'ping -c 3' envía 3 paquetes ICMP a la IP 192.168.0.1 para verificar la conectividad.
 
+# El comando ssh (Secure Shell)
+
+# Se utiliza para establecer una conexión remota segura entre dos computadoras. 
+# Esta conexión permite ejecutar comandos, transferir archivos y administrar sistemas de forma segura mediante cifrado.
+
+ssh usuario@host
+
+# Ejemplo básico:
+ssh user@192.168.1.100
+
+# Opciones comunes
+
+# Especificar puerto: Si el servidor SSH no utiliza el puerto predeterminado (22):
+ssh -p 2222 user@host
+
+# Copiar un archivo al servidor remoto: Usando scp (comando basado en SSH):
+
+scp archivo.txt usuario@host:/ruta/destino/
+
 echo "=== Ejercicios Prácticos ==="
 # 1. Ejecuta 'ip link show' y analiza las interfaces de red disponibles.
 # 2. Usa 'ip addr show' para ver las direcciones IP de todas las interfaces.

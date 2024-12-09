@@ -210,7 +210,7 @@ options=(
     "a) r\nb) w\nc) x\nd) rwx"
     "a) chown\nb) chmod\nc) mv\nd) chgrp"
     "a) r\nb) w\nc) x\nd) rw"
-    "a) Lectura, escritura y ejecución para todos\nb) Lectura y ejecución para grupo y otros\nc) Solo escritura para el usuario\nc) Ejecución para todos"
+    "a) Lectura, escritura y ejecución para todos\nb) Lectura y ejecución para grupo y otros\nc) Solo escritura para el usuario\nd) Ejecución para todos"
     "a) ps\nb) whoami\nc) id\nd) chmod"
     "a) chgrp\nb) chown\nc) chmod\nd) setfacl"
     "a) rw-\nb) r--\nc) --x\nd) -w-"
